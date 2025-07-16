@@ -3,7 +3,7 @@
 Hey there! 👋  
 Welcome to the source code of my **personal portfolio website** – built from scratch to showcase who I am, what I do, and what I've built 💻✨
 
-Check it out live 👉 [kashish.codes](https://kashishcodes.github.io/portfolio)
+Check it out live 👉 [kashish.codes](https://github.com/kashish2410/kashish.codes)
 
 ---
 
