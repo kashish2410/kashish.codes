@@ -18,13 +18,20 @@
         <div class="nav-logo">
             <h3>kashish<span>.codes</span></h3>
         </div>
-        <div class="nav-link">
+        
+        <div class="nav-link" id="navLinks">
             <ul>
                 <li><a href="#About">ABOUT</a></li>
                 <li><a href="#Skills">SKILLS</a></li>
                 <li><a href="#Projects">PROJECTS</a></li>
                 <li><a href="#Contact">CONTACT</a></li>
             </ul>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
     </section>
   </nav>
@@ -148,7 +155,7 @@
 
   <section id="Contact">
     <h2 class="contact-head">Contact Me</h2>
-     <p class="contact-text">Have a project, idea or just want to say hi? Let’s chat!</p>
+     <p class="contact-text">Have a project, idea or just want to say hi? Let's chat!</p>
     <div class="contact-details">
         <div class="contact-box">
         <h3 class="contact-box-head">Email Me</h3>
@@ -200,9 +207,7 @@
 </footer>
 <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
