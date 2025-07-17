@@ -20,8 +20,7 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-light);
   font-family: 'Inter', sans-serif;
-  
-
+  width: 100%vh;
 }
 
 /* navbar */
@@ -29,7 +28,7 @@ body {
 nav {
   text-align: center;
   background-color: #151515;
-  color: #1DB954;
+  color: var(--accent);
   box-shadow:  0 0.25rem 0.75rem rgba(0, 0, 0, 0.5),
                0 0 0.6rem rgba(29, 209, 92, 0.474);
   
@@ -44,14 +43,19 @@ nav {
     position: sticky;
     top: 0;
     z-index: 999;
+    gap: 3rem ;
 }
 
 .nav-logo{
     font-size: 1.6rem;
     font-weight: 300;
-    padding-left: 3rem;
-    letter-spacing: 0.5px;
+    padding: 0rem 3rem;
+    letter-spacing: 0.03rem;
     font-family: 'Fira Sans', 'Inter', sans-serif;
+}
+
+.nav-logo h3{
+  margin: 0rem 1rem 0rem 3rem;
 }
 
 .nav-logo span{
@@ -68,19 +72,19 @@ nav {
     gap: 3rem;
     list-style: none;
     font-size: 1.2rem;
-    padding-right: 2rem;
+    padding: 0rem 2rem;
 }
 
 .nav-link ul li a {
   text-decoration: none;
   font-weight: 500;
-  color: #1DB954;
+  color: var(--accent);
   transition: all 0.3s ease;
 }
 
 .nav-link ul li a:hover {
   color: #00ff88; 
-  text-shadow: 0 0 0.3rem #1DB954;
+  text-shadow: 0 0 0.3rem var(--accent);
 }
 
 /* about */
@@ -108,12 +112,12 @@ nav {
 }
 
 .about-text {
-  max-width: 600px;
+  max-width: 37.5rem;
   padding-left: 2rem;
 }
 
 .about-hey{
-    color: white;
+    color: var(--text-light);
     font-size: 3.3rem;
     padding: 0.7rem;
     margin-bottom: 0.5rem;
@@ -127,7 +131,7 @@ nav {
 }
 
 .about-name:hover{
-  color: #1DB954;
+  color: var(--accent);
   transform: scale(1.05);
 }
 
@@ -141,8 +145,8 @@ nav {
 }
 
 .btn{
-    background-color: #1DB954;
-    color: white;
+    background-color: var(--accent);
+    color: var(--text-light);
     align-self: center;
     height: 3.7rem;
     width: 16rem;
@@ -160,40 +164,22 @@ nav {
 
 .btn:hover {
   background-color: #17a74a;
-  box-shadow: 0 0 10px #1DB954;
+  box-shadow: 0 0 0.625rem var(--accent);
   transform: scale(1.05);
 }
 
 #resume a{
     text-decoration: none;
-    color: white;
+    color: var(--text-light);
 }
 
 .about-img img{
-    border: 0.6rem solid #1DB954 ;
-    height: 400px;
-    width: 400px;
+    border: 0.6rem solid var(--accent) ;
+    height: 25rem;
+    width: 25rem;
     border-radius: 50%;
     margin-right: 5rem ;
     object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 3rem 1rem;
-  }
-
-  .about-img img {
-    width: 250px;
-    height: 250px;
-    margin-top: 2rem;
-  }
-
-  .about-text .btn {
-    margin: 1.5rem auto 0;
-  }
 }
 
 
@@ -202,7 +188,7 @@ nav {
 .skills-head, .projects-head, .contact-head{
     text-align: center;
     background-color: #151515;
-    color: #1DB954;
+    color: var(--accent);
     box-shadow:  0 0.25rem 0.75rem rgba(0, 0, 0, 0.5),
                0 0 0.5rem rgba(29, 185, 84, 0.3);
     padding: 1rem 3rem ;
@@ -222,8 +208,8 @@ nav {
 
 .skills-container{
     background-color: #151515;
-    border: 2px solid #3EE410;
-    width: 450px;
+    border: 0.125rem solid #3EE410;
+    width: 28.125rem;
     border-radius: 2rem;
     margin: 4rem;
     padding: 1rem ;
@@ -232,7 +218,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 0 2rem rgba(29, 185, 84, 0.3);
-    border-color: #1DB954;
+    border-color: var(--accent);
 }
 
 .skills-container h3{
@@ -258,21 +244,22 @@ nav {
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
-    border: 1px solid #777;
+    border: 0.06rem solid #777;
     border-radius: 0.8rem;
     background-color: #181818;
     color: #f1f1f1;
     font-size: 1rem;
-    min-width: 120px;
+    min-width: 7.5rem;
     justify-content: flex-start;
     transition: 0.3s ease;
     letter-spacing: 0.12rem;
+    
 }
 
 .skills-tag:hover {
-  transform: translateY(-2px);
+  transform: translateY(-0.125rem);
   box-shadow: 0 0 0.4rem rgba(29, 185, 84, 0.3);
-  border-color: #1DB954;
+  border-color: var(--accent);
 }
 
 .skills-tag img {
@@ -294,13 +281,13 @@ nav {
 
 .project-card{
     background-color: #151515;
-    border: 2px solid #3EE410;
-    width: 500px;
+    border: 0.125rem solid #3EE410;
+    width: 31.25rem;
     border-radius: 2rem;
     margin: 4rem;
     padding: 1.8rem ;
     box-shadow: 0 0.5rem 2rem rgba(29, 185, 84, 0.3);
-    border-color: #1DB954;
+    border-color: var(--accent);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -352,7 +339,7 @@ nav {
     align-items: center;
     gap: 0.5rem;
     padding: 0.6rem 1rem;
-    border: 1px solid #333;
+    border: 0.06rem solid #333;
     border-radius: 0.8rem;
     background-color: #1e1e1e;
     color: #f1f1f1;
@@ -366,7 +353,7 @@ nav {
   margin: 2rem 2rem 0 1rem;
   background-color: transparent;
   color: var(--hover-accent);
-  border: 1px solid var(--hover-accent);
+  border: 0.06rem solid var(--hover-accent);
   padding: 0.4rem 0.8rem;
   border-radius: 0.4rem;
   font-weight: 600;
@@ -401,7 +388,7 @@ nav {
 
 
 .contact-box{
-  border: 1px solid #1DB954;
+  border: 0.06rem solid var(--accent);
    box-shadow:  0 0.25rem 0.75rem rgba(0, 0, 0, 0.5),
                0 0 0.5rem rgba(29, 185, 84, 0.3);
   align-self: center;
@@ -438,7 +425,7 @@ nav {
 .form-grp input, textarea{
   height: 2.5rem;
   background-color: #121212;
-  border: 1px solid rgba(255, 255, 255, 0.503);
+  border: 0.06rem solid rgba(255, 255, 255, 0.503);
   color: #cfcfcf;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -449,7 +436,7 @@ nav {
 #send{
   width: 20rem;
   margin: 0rem;
-  background: #1db954b0;
+  background: var(--accent);
   letter-spacing: 0.2rem;
 }
 
@@ -459,12 +446,12 @@ nav {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   padding: 1rem;
 }
 
 .footer-head{
-  color: #1DB954;
+  color: var(--accent);
   text-align: center;
   font-size: 1.5rem;
   margin: 1rem;
@@ -491,7 +478,7 @@ nav {
 
 .foot-link ul li a:hover {
   color: #00ff88; 
-  text-shadow: 0 0 0.3rem #1DB954;
+  text-shadow: 0 0 0.3rem var(--accent);
 }
 
 .foot-logo{
@@ -502,8 +489,122 @@ nav {
     margin: 1rem 0;
 }
 
+.email{
+  text-decoration: none; 
+  color: var(--accent);
+  font-size: 1.1rem;
+}
 .foot-foot{
   color: rgba(255, 255, 255, 0.558);
   letter-spacing: 0.1rem;
+  font-size: 0.85rem;
 }
 
+
+
+
+
+/* Tablets */
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 18.75rem;
+    height: 18.75rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+    #navbar{
+    justify-content: center;
+  }
+
+  .nav-link ul {
+    gap: 1rem;
+  }
+}
+
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+.nav-link {
+    display: none; 
+  }
+
+#About{
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text p{
+  font-size: 1.1rem;
+}
+
+.about-img img {
+    width: 15.625rem;
+    height: 15.625rem;
+    margin-top: 2rem;
+}
+
+.about-text .btn {
+    margin: 1.5rem auto 0;
+}
+
+.skills-body{
+  padding: 0rem;
+  margin: 1rem;
+}
+.skills-container{
+  justify-content: center;
+  margin: 1rem;
+}
+
+.skills-tags {
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.project-card {
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.project-info p{
+    font-size: 1.05rem;
+}
+
+.projects-container{
+    padding: 0;
+}
+ 
+.contact-box{
+  padding: 1.5rem;
+}
+
+.form-grp input, textarea{
+  width: 15rem;
+}
+
+.footer-head{
+  font-size: 1.3rem;
+}
+
+.foot-link ul{
+  gap: 1rem;
+  padding-left: 0;
+  font-size: 0.9rem;
+}
+
+ #send{
+  width: 10rem;
+ }
+}
